@@ -2,22 +2,36 @@ Drafting Assignment Requirements:
     [add later]
 
 Page 1: Index
-Image:
+Image: Something Me
+Status: Pretty well-populated; needs image
+Notes:
+    Could write up a better opening statement
+    Could hyperlink navigation stuff
 
 Page 2: Education
-Image:
+Image: Something UMich
+Status: Pretty well-populated; needs image
 
 Page 3: Employment
-Image:
+Image: Could use a Stockwell Staff Photo
+Status: Pretty well-populated; needs image
 
 Page 4: Skills
-Image:
+Image: ???
+Status: Needs everything
 
 Page 5: Contact
-Image:
+Image: 
+Status: Just needs obligatory image
 
 Page 6: Gallery
-Image:
+Image: Dank Memes or Photography
+Status: Needs everything
+Notes:
+    Maybe throw on descriptions
 
 Page 7: Projects
-Image:
+Image: Stuff from the 330 project
+Status: Need descriptions fleshed out
+
+All, In Time: Navigation Panes // Better Back Button Solution
