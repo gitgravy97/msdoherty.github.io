@@ -37,3 +37,7 @@ Image: Stuff from the 330 project
 Status: Need descriptions fleshed out
 
 All, In Time: Navigation Panes // Better Back Button Solution
+
+Resource for Logos
+https://vpcomm.umich.edu/brand/downloads
+https://socialmedia.umich.edu/downloads/
