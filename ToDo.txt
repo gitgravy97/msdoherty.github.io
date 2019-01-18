@@ -14,16 +14,17 @@ Image: Something UMich
 Status: Pretty well-populated; needs image
 
 Page 3: Employment
-Image: Could use a Stockwell Staff Photo
-Status: Pretty well-populated; needs image
+Image: 2x Stockwell Staff photos - make inline when CSS learned
+Status: Meets Draft Standards
 
 Page 4: Skills
 Image: ???
 Status: Needs everything
 
 Page 5: Contact
-Image: 
-Status: Just needs obligatory image
+Image:
+https://ccsearch.creativecommons.org/photos/445d3fdf-8526-4efc-859e-d322a3dfc43d
+Status: Meets Draft Standards
 
 Page 6: Gallery
 Image: Dank Memes or Photography
