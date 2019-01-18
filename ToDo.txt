@@ -1,5 +1,6 @@
-Drafting Assignment Requirements:
-    [add later]
+NOTE: So it seems like the assignment was more about not using any tags and just putting in content in plaintext.
+Make a subfolder within the site, make file copies into it, and remove all of the tags
+Basically downgrade it mercilessly 
 
 Page 1: Index
 Image: Something Me
