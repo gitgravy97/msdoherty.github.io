@@ -1,43 +1,40 @@
-NOTE: So it seems like the assignment was more about not using any tags and just putting in content in plaintext.
-Make a subfolder within the site, make file copies into it, and remove all of the tags
-Basically downgrade it mercilessly 
+Status & To Do:
 
 Page 1: Index
 Image: Something Me
-Status: Pretty well-populated; needs image
-Notes:
-    Could write up a better opening statement
-    Could hyperlink navigation stuff
+Status: Pretty well-populated; Could write up a better opening statement
 
 Page 2: Education
-Image: Something UMich
-Status: Pretty well-populated; needs image
+Status: Meets Draft Standards
 
 Page 3: Employment
-Image: 2x Stockwell Staff photos - make inline when CSS learned
 Status: Meets Draft Standards
 
 Page 4: Skills
-Image: ???
-Status: Needs everything
-
-Page 5: Contact
-Image:
-https://ccsearch.creativecommons.org/photos/445d3fdf-8526-4efc-859e-d322a3dfc43d
 Status: Meets Draft Standards
 
+Page 5: Contact
+Status: Meets Draft Standards
+Image from https://ccsearch.creativecommons.org/photos/445d3fdf-8526-4efc-859e-d322a3dfc43d
+
 Page 6: Gallery
-Image: Dank Memes or Photography
-Status: Needs everything
-Notes:
-    Maybe throw on descriptions
+Status: Meets Draft Standards
 
 Page 7: Projects
-Image: Stuff from the 330 project
-Status: Need descriptions fleshed out
+Status: Work Needed but Meets Draft Standards
 
-All, In Time: Navigation Panes // Better Back Button Solution
+All, In Time: Navigation Panes, CSS, "Click to move to top" button"
 
 Resource for Logos
 https://vpcomm.umich.edu/brand/downloads
 https://socialmedia.umich.edu/downloads/
+
+"Unsplash.com" mentioned in Jan 18th lecture as possible resource
+
+For CSS:
+https://www.sessions.edu/color-calculator/
+
+Flavicons 
+https://icons8.com/icon/pack/business/material
+https://icons8.com/icon/pack/food/material
+https://icons8.com/icon/pack/programming/material
