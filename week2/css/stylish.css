@@ -40,6 +40,14 @@ nav li a.current {
     text-decoration: overline underline;
 }
 
+header h1{
+    color: rgb(0,0,0);
+    border-style: solid;
+    display: block;
+    padding: 3px;
+    text-decoration: underline;
+}
+
 /* See NCSU link in ReadMe regarding implementation */
 a.skip-to-cont {
     left:-999px;
@@ -48,7 +56,7 @@ a.skip-to-cont {
     width: 1px;
     height: 1px;
     overflow:hidden;
-    color: red;
+    color: rgb(255,0,0);
 }
 
 a.skip-to-cont:focus, a.skip-to-cont:active{
