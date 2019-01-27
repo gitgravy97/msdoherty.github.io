@@ -47,3 +47,7 @@ https://stackoverflow.com/questions/20470345/should-the-header-and-footer-tags-b
 
 Selection
 http://www.htmldog.com/guides/css/intermediate/classid/
+
+Skip To Main
+https://jaketrent.com/post/accessibility-skip-to-main-content/
+https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
