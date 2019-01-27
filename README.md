@@ -19,7 +19,7 @@ Page 7: Projects
 Projects not yet embedded or setup too work with this yet
 May need to complete post-339
 
-============================================================
+= = = = = = = = = = = = = = = = = = = =
 CSS:
 http://css3generator.com/
 
