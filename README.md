@@ -42,5 +42,8 @@ https://socialmedia.umich.edu/downloads/
 HTML : Topic - Body VS Main tag:
 http://html5doctor.com/the-main-element/
 
+HTML : Topic - Usage of Main
+https://stackoverflow.com/questions/20470345/should-the-header-and-footer-tags-be-inside-the-main-tag
+
 Selection
 http://www.htmldog.com/guides/css/intermediate/classid/
