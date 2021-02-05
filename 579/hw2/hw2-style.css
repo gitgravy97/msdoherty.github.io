@@ -1,7 +1,13 @@
-/* hw2 manipulate 5 properties */
-/* https://www.w3schools.com/css/css3_buttons.asp */
-/* https://css-tricks.com/multiple-class-id-selectors/ */
-/* http://colormind.io */
+/*
+Button CSS  https://www.w3schools.com/css/css3_buttons.asp
+Selectors   https://css-tricks.com/multiple-class-id-selectors/
+Color Palettes  http://colormind.io [CD433A -- F8F4DB -- A3D3D4 -- 75AC98 -- DC4221
+*/
+
+/*  Layout Stuff
+Grid Rows   https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
+Grid Gaps   https://teamtreehouse.com/community/grid-gap-properties-obsolete
+*/
 
 h3 {
     text-decoration: underline;
@@ -11,15 +17,14 @@ h3 {
 p {
     margin-bottom: 10px;
     margin-top: 5px;
+    font-family: 'Noto Serif JP';
 }
 
-table, th, td {
-    border: 1px solid;
-}
+table, th, td {border: 1px solid;}
 
-.key{
-    border-radius: 8px;
-}
+td{ padding: 3px;}
+
+.key{ border-radius: 8px;}
 
 .black-key{
     background-color: #000000;
@@ -31,7 +36,39 @@ table, th, td {
     color: #000000;
 }
 
-#test-chord{
+#Grid-Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2;
+    min-height: 33vh;           min-width: 50vh;
+    gap: 30px;
+}
+
+#Test-Chord{
     display: block;
     margin: 8px;
+}
+
+#Surreal-Pizza{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 50%;
+}
+
+#Osc-Panel{
+    /*display: inline-block;*/
+    grid-column: 2 / span 3;
+    grid-row-start: 1;      grid-row-end: 1;   
+}
+
+#Key-Panel{
+    /*display: inline-block;*/
+    grid-column: 2 / span 3;
+    grid-row-start: 2;      grid-row-end: 2;
+}
+
+#Title{
+    font-family: 'Noto Serif JP';
+    padding: 4px;
 }

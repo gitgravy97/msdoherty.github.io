@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="hw2-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph|fire|fire-animation|neon">
 
     <script>
         var context = new AudioContext()
@@ -23,13 +26,15 @@
             o.start()
         }
     </script>
-    <title>SI 579 :: Homework 1</title>
+    <title>SI 579 :: Homework 2</title>
 </head>
 
 <body>
     <header>
-        <h1 onclick=beep()>alright let's make a webpage with things and stuff</h1>
+        <h1 id="Title" class="font-effect-fire-animation" style="background-color:#000000;">
+            alright, week 2, so let's make this worse, but <i>better</i> worse</h1>
         <nav>
+            <ul><a href="s2-tests.html"><b>Javascript Tests</b></a></ul>
             <ul><a href="https://www.youtube.com/watch?v=AF7h0XyiPbY">Mom Jeans :: AudioTree</a></ul>
             <ul><a href="https://www.youtube.com/watch?v=bDKpkuOY8h0">The Front Bottoms :: AudioTree</a></ul>
             <ul><a href="https://www.youtube.com/watch?v=ExWNledkLj0">Sayonara no Yukue by Alisa Takigawa :: Owari Mono Gatari</a></ul>
@@ -45,33 +50,35 @@
     </section>
     <hr/>
 
-    <img src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza" style="height:25%;width:25%;"/>
+    <section id='Grid-Container'>
 
-    <section>
-        <h2>Various Oscillator Beeps</h2>
-        <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating how to mess with audio in vanilla JS:</p>
-        <button onclick="beep('square')">Square Osc</button>
-        <button onclick="beep('sawtooth')">Sawtooth Osc</button>
-        <button onclick="beep('triangle')">Triangle Osc</button>
-        <button onclick="beep('sine')">Sine Osc</button>
-    </section>
-    <hr/>
-    
-    <section>
-        <h2>Octave 4 Notes</h2>
-        <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
-        <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
-        <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
-        <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
-        <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
-        <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
-        <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
-        <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
-        <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
-        <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
-        <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
-        <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
-        <button id='test-chord' onclick="[261.6, 329.6, 392.0].forEach(each => beep('sine',each))">Chord</button>
+        <img id='Surreal-Pizza' src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza"/>
+
+        <section id='Osc-Panel'>
+            <h2>Assorted Oscillators</h2>
+            <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating how to mess with audio in vanilla JS:</p>
+            <button onclick="beep('square')">Square Osc</button>
+            <button onclick="beep('sawtooth')">Sawtooth Osc</button>
+            <button onclick="beep('triangle')">Triangle Osc</button>
+            <button onclick="beep('sine')">Sine Osc</button>
+        </section>
+        
+        <section id='Key-Panel'>
+            <h2>Octave 4 Notes</h2>
+            <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
+            <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
+            <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
+            <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
+            <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
+            <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
+            <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
+            <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
+            <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
+            <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
+            <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
+            <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
+            <button id='Test-Chord' onclick="[261.6, 329.6, 392.0].forEach(each => beep('sine',each))">C Major</button>
+        </section>
     </section>
     <hr/>
 
