@@ -1,3 +1,7 @@
+/* hw2 manipulate 5 properties */
+/* https://www.w3schools.com/css/css3_buttons.asp */
+/* https://css-tricks.com/multiple-class-id-selectors/ */
+
 h3 {
     text-decoration: underline;
     margin-bottom: 2px;
@@ -10,4 +14,23 @@ p {
 
 table, th, td {
     border: 1px solid;
+}
+
+.key{
+    border-radius: 8px;
+}
+
+.black-key{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.white-key{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+#test-chord{
+    display: block;
+    margin: 8px;
 }

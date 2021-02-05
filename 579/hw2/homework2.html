@@ -57,12 +57,22 @@
     </section>
     <hr/>
 
+
     <section>
-        <h2>C Major</h2>
-        <button onclick="beep('sine', 261.6)">C</button>
-        <button onclick="beep('sine', 329.6)">E</button>
-        <button onclick="beep('sine', 392.0)">G</button>
-        <button onclick="[261.6, 329.6, 392.0].forEach(each => beep('sine',each))">Chord</button>
+        <h2>Octave 4 Notes</h2>
+        <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
+        <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
+        <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
+        <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
+        <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
+        <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
+        <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
+        <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
+        <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
+        <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
+        <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
+        <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
+        <button id='test-chord' onclick="[261.6, 329.6, 392.0].forEach(each => beep('sine',each))">Chord</button>
     </section>
     <hr/>
 
@@ -70,7 +80,7 @@
         <h2>Stuff I'm up to right now</h2>
         <p>I'm kinda trying to do a lotta things because of school/work/graduating/quarantine, so uh yeah, more content and stuff:</p>
 
-        <section>
+        <section id='Class-Sect'>
             <h3>Classes</h3>
             <table>
                 <thead><tr><th>Class-Code</th><th>Class Name</th><th>Reason</th></tr></thead>
