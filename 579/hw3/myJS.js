@@ -23,11 +23,11 @@ function changeColor(self){
 
 /* For excercise 2, you need to write an event handler for the button id "convertbtn"
 * on mouse click. For best practice use addEventListener. */
+
 var myButton = document.getElementById("convertbtn");
 if(myButton){
     myButton.addEventListener("click", () => { convertTemp();})
 }
-
 
 /* Then write a function that calculates Fahrenheit to Celsius and display it on the webpage */
 function convertTemp(){
@@ -41,5 +41,3 @@ function convertTemp(){
     console.log(output);
     output.innerText = outTemp;
 }
-
-
