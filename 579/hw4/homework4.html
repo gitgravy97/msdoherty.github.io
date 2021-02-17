@@ -5,34 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <script src="audio.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph|fire|fire-animation|neon">
-
-    <script>
-        var context = new AudioContext()
-
-        function beep(osc_type, pitch){
-            var o = context.createOscillator()
-            var g = context.createGain()
-            o.type = osc_type
-            if(pitch !== undefined){
-                o.frequency.value = pitch;
-            }
-            o.connect(g)
-            g.connect(context.destination)
-
-            g.gain.exponentialRampToValueAtTime(0.00001, context.currentTime + 3)
-            o.start()
-        }
-    </script>
     <title>SI 579 :: Homework 2</title>
 </head>
 
 <body>
     <header>
         <h1 id="Title" class="font-effect-fire-animation" style="background-color:#000000;">
-            alright, week 2, so let's make this worse, but <i>better</i> worse</h1>
+            week4</h1>
         <nav>
             <ul><a href="https://www.youtube.com/watch?v=AF7h0XyiPbY">Mom Jeans :: AudioTree</a></ul>
             <ul><a href="https://www.youtube.com/watch?v=bDKpkuOY8h0">The Front Bottoms :: AudioTree</a></ul>
@@ -64,20 +48,52 @@
         </section>
         
         <section id='Key-Panel'>
-            <h2>Octave 4 Notes</h2>
-            <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
-            <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
-            <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
-            <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
-            <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
-            <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
-            <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
-            <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
-            <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
-            <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
-            <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
-            <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
-            <button id='Test-Chord' onclick="[261.6, 329.6, 392.0].forEach(each => beep('sine',each))">C Major</button>
+            <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
+            <section id='oct3'>
+                <h2>Octave 3 Notes</h2>
+                <button onclick="beep('sine', 130.81)" class='key white-key'>C</button>
+                <button onclick="beep('sine', 138.59)" class='key black-key'>C#/Db</button>
+                <button onclick="beep('sine', 145.83)" class='key white-key'>D</button>
+                <button onclick="beep('sine', 155.56)" class='key black-key'>D#/Eb</button>
+                <button onclick="beep('sine', 164.81)" class='key white-key'>E</button>
+                <button onclick="beep('sine', 174.61)" class='key white-key'>F</button>
+                <button onclick="beep('sine', 184.99)" class='key black-key'>F#/Gb</button>
+                <button onclick="beep('sine', 195.99)" class='key white-key'>G</button>
+                <button onclick="beep('sine', 207.65)" class='key black-key'>G#/Ab</button>
+                <button onclick="beep('sine', 220.00)" class='key white-key'>A</button>
+                <button onclick="beep('sine', 233.08)" class='key black-key'>A#/Bb</button>
+                <button onclick="beep('sine', 246.94)" class='key white-key'>B</button>
+            </section>
+            <section id='oct4'>
+                <h2>Octave 4 Notes</h2>
+                <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
+                <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
+                <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
+                <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
+                <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
+                <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
+                <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
+                <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
+                <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
+                <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
+                <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
+                <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
+            </section>
+            <section id='oct5'>
+                <h2>Octave 5 Notes</h2>
+                <button onclick="beep('sine', 523.25)" class='key white-key'>C</button>
+                <button onclick="beep('sine', 554.36)" class='key black-key'>C#/Db</button>
+                <button onclick="beep('sine', 587.62)" class='key white-key'>D</button>
+                <button onclick="beep('sine', 622.25)" class='key black-key'>D#/Eb</button>
+                <button onclick="beep('sine', 659.25)" class='key white-key'>E</button>
+                <button onclick="beep('sine', 698.45)" class='key white-key'>F</button>
+                <button onclick="beep('sine', 739.98)" class='key black-key'>F#/Gb</button>
+                <button onclick="beep('sine', 783.99)" class='key white-key'>G</button>
+                <button onclick="beep('sine', 830.60)" class='key black-key'>G#/Ab</button>
+                <button onclick="beep('sine', 880.00)" class='key white-key'>A</button>
+                <button onclick="beep('sine', 932.32)" class='key black-key'>A#/Bb</button>
+                <button onclick="beep('sine', 987.76)" class='key white-key'>B</button>
+            </section>
         </section>
     </section>
     <hr/>
@@ -97,6 +113,12 @@
                         <td>What... what even is a stock option?</td>
                     </tr>
                     <tr>
+                        <td>LHS 712</td>
+                        <td>Natural Language Processing (in Healthcare)</td>
+                        <td>I thought it would be interesting not only to learn about NLP,<br>
+                            but how it's applied in a more domain-specific research capacity</td>
+                    </tr>
+                    <tr>
                         <td>SI 504</td>
                         <td>Servers & Shells</td>
                         <td>I'm familiar with this stuff but want to "fill in the gaps"</td>
@@ -112,11 +134,6 @@
                         <td>Want to practice JS more ++ learn TS ++ practice interface design more.</td>
                     </tr>
                     <tr>
-                        <td>SI 630</td>
-                        <td>Natural Language Processing</td>
-                        <td>NLP seems super interesting and useful</td>
-                    </tr>
-                    <tr>
                         <td>SI 699</td>
                         <td>Mastery Capstone (Big Data Section)</td>
                         <td>Diploma, please</td>
@@ -128,7 +145,7 @@
         
         <section>
             <h3>Working: For the MADS program</h3>
-            <p>Why :: My landlord likes dollars</p>
+            <p>Why :: Dollars and remote work are pretty cool</p>
         </section>
 
         <section>
@@ -142,13 +159,18 @@
         </section>
 
         <section>
+            <h3>Trying to Find:Postgrad Fulltime Job</h3>
+            <p>Why :: I've been in school forever and It's Time To Stop</p>
+        </section>
+
+        <section>
             <h3>Self-Teaching: Piano</h3>
             <p>Why :: 2020 was a ukulele year but 2021 is a keyboard year</p>
         </section>
 
         <section>
-            <h3>Self-Teaching: Theory for Technical Interview Exams</h3>
-            <p>Why :: UMSI doesn't really grind the leetcode-esque stuff employers go for in software interviews quite like EECS does</p>
+            <h3>Practicing: Technical Interviews</h3>
+            <p>Why :: I'm bad at exams but need to get hired</p>
         </section>
     </section>
 
