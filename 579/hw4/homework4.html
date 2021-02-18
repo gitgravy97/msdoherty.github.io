@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="audio.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
@@ -17,6 +16,7 @@
     <header>
         <h1 id="Title" class="font-effect-fire-animation" style="background-color:#000000;">
             week4</h1>
+        <!--
         <nav>
             <ul><a href="https://www.youtube.com/watch?v=AF7h0XyiPbY">Mom Jeans :: AudioTree</a></ul>
             <ul><a href="https://www.youtube.com/watch?v=bDKpkuOY8h0">The Front Bottoms :: AudioTree</a></ul>
@@ -24,12 +24,13 @@
             <ul><a href="https://www.youtube.com/watch?v=EdmL835q9To">Bloom by Thom Yorke :: Marisa Gesualdi & Electric Lady Studios</a></ul>
             <ul><a href="https://www.youtube.com/watch?v=pok8H_KF1FA">Say So by Doja Cat :: Kemosabe Records</a></ul>
         </nav>
+        -->
     </header>
     <hr/>
 
     <section>
-        <h2>What kind of page will this be?</h2>
-        <p>Assorted garbage, because I'm still too burned out from a heavy fall semester to be too thematic</p>
+        <h2>What is this?</h2>
+        <p>Assorted Garbage & Audio Shenaniganry because I should've double-majored audiotech in undergrad, whoops</p>
     </section>
     <hr/>
 
@@ -45,11 +46,34 @@
             <button onclick="beep('sawtooth')">Sawtooth Osc</button>
             <button onclick="beep('triangle')">Triangle Osc</button>
             <button onclick="beep('sine')">Sine Osc</button>
+
+            <p>Generate a Pitch:</p>
+            <label for="pitchGen">How Many Hz? (40-4000):</label>
+            <input type="number" id="PitchInput" min="40" max="4000" value="350">
+            <button id="CustomPitchButton">Beep</button>
+            <button id="SavePitchButton">Keep</button>
+            <button id="PurgePitchButton" onclick="PurgePitches()">Purge</button>
+
         </section>
         
         <section id='Key-Panel'>
             <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
-            <section id='oct3'>
+            <section id='OctaveToggles'>
+                <input type="checkbox" id="tog_oct_cust">
+                <label>Hide Customs</label><br>
+                <input type="checkbox" id="tog_oct3">
+                <label>Hide Octave 3</label><br>
+                <input type="checkbox" id="tog_oct4">
+                <label>Hide Octave 4</label><br>
+                <input type="checkbox" id="tog_oct5">
+                <label>Hide Octave 5</label><br>
+                <input type="checkbox" id="oct_relabel">
+                <label>Compact Keymode</label><br>
+            </section>
+            <section class="octave" id=keeped_beeps>
+                <h2>Customs</h2>
+            </section>
+            <section class="octave" id='oct3'>
                 <h2>Octave 3 Notes</h2>
                 <button onclick="beep('sine', 130.81)" class='key white-key'>C</button>
                 <button onclick="beep('sine', 138.59)" class='key black-key'>C#/Db</button>
@@ -64,7 +88,7 @@
                 <button onclick="beep('sine', 233.08)" class='key black-key'>A#/Bb</button>
                 <button onclick="beep('sine', 246.94)" class='key white-key'>B</button>
             </section>
-            <section id='oct4'>
+            <section class="octave" id='oct4'>
                 <h2>Octave 4 Notes</h2>
                 <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
                 <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
@@ -79,7 +103,7 @@
                 <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
                 <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
             </section>
-            <section id='oct5'>
+            <section class="octave" id='oct5'>
                 <h2>Octave 5 Notes</h2>
                 <button onclick="beep('sine', 523.25)" class='key white-key'>C</button>
                 <button onclick="beep('sine', 554.36)" class='key black-key'>C#/Db</button>
@@ -178,6 +202,8 @@
         <hr/>
         McCoy Doherty -- Winter 2021
     </footer>
+
+    <script src="audio.js"></script>
 </body>
 
 </html>

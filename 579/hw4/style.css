@@ -8,6 +8,9 @@ Color Palettes  http://colormind.io [CD433A -- F8F4DB -- A3D3D4 -- 75AC98 -- DC4
 Grid Rows   https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
 Grid Gaps   https://teamtreehouse.com/community/grid-gap-properties-obsolete
 */
+h2 {
+    margin-bottom: 4px;
+}
 
 h3 {
     text-decoration: underline;
@@ -24,7 +27,14 @@ table, th, td {border: 1px solid;}
 
 td{ padding: 3px;}
 
-.key{ border-radius: 8px;}
+.hidden{
+    display: none;
+}
+
+.key{
+    border-radius: 8px;
+    margin: 1px;
+}
 
 .black-key{
     background-color: #000000;
@@ -71,4 +81,8 @@ td{ padding: 3px;}
 #Title{
     font-family: 'Noto Serif JP';
     padding: 4px;
+}
+
+#OctaveToggles{
+    margin-bottom: 8px;
 }
