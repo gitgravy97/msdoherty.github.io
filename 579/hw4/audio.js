@@ -1,3 +1,5 @@
+// TO DO -- consider setting selected-pitch-osc as global variable?
+
 
 function beep(osc_type, pitch){
     var context = new AudioContext()
