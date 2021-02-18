@@ -48,6 +48,15 @@
             <button onclick="beep('sine')">Sine Osc</button>
 
             <p>Generate a Pitch:</p>
+            <input type="radio" id="genPitchSq" name="customPitchOsc" value="square">
+            <label for="square">Square</label>
+            <input type="radio" id="genPitchSaw" name="customPitchOsc" value="sawtooth">
+            <label for="sawtooth">Sawtooth</label>
+            <input type="radio" id="genPitchTri" name="customPitchOsc" value="triangle">
+            <label for="triangle">Triangle</label>
+            <input type="radio" id="genPitchSin" name="customPitchOsc" value="sine">
+            <label for="sine">Sine</label></br>
+
             <label for="pitchGen">How Many Hz? (40-4000):</label>
             <input type="number" id="PitchInput" min="40" max="4000" value="350">
             <button id="CustomPitchButton">Beep</button>
@@ -72,6 +81,7 @@
             </section>
             <section class="octave" id=keeped_beeps>
                 <h2>Customs</h2>
+                <p>Key: Square (■), Sawtooth (▼), Trangle (▲), Sine(~)</p>
             </section>
             <section class="octave" id='oct3'>
                 <h2>Octave 3 Notes</h2>

@@ -17,7 +17,17 @@ function beep(osc_type, pitch){
 
 function inputBeep(){
     // console.log(document.getElementById("PitchInput").value)
-    beep(osc_type="sine", pitch=document.getElementById("PitchInput").value)
+    let osc = "sine";
+    if(document.getElementById('genPitchSq').checked){
+        osc = "square";
+    } else if(document.getElementById('genPitchSaw').checked){
+        osc = "sawtooth";
+    } else if(document.getElementById('genPitchTri').checked){
+        osc = "triangle";
+    } else {
+        osc = "sine";
+    }
+    beep(osc_type=osc, pitch=document.getElementById("PitchInput").value);
 }
 
 // https://stackoverflow.com/questions/50460645/getelementbyid-style-display-does-not-work
@@ -61,9 +71,24 @@ function BeepKeep(){
     const keptPitch = document.getElementById('PitchInput').value
     // console.log(keptPitch)
     let keptBeep = document.createElement('button');
-    keptBeep.innerText = keptPitch;
+
+    let osc = "sine";
+    if(document.getElementById('genPitchSq').checked){
+        osc = "square";
+        keptBeep.innerText = "■ ".concat(keptPitch);
+    } else if(document.getElementById('genPitchSaw').checked){
+        osc = "sawtooth";
+        keptBeep.innerText = "▼ "+keptPitch;
+    } else if(document.getElementById('genPitchTri').checked){
+        osc = "triangle";
+        keptBeep.innerText = `▲ ${keptPitch}`;
+    } else{
+        osc = "sine";
+        keptBeep.innerText = "~ "+keptPitch;
+    }
+
     keptBeep.className = "key white-key";
-    keptBeep.onclick = ()=>beep('sine', keptPitch);
+    keptBeep.onclick = ()=>beep(osc, keptPitch);
     document.getElementById('keeped_beeps').append(keptBeep);
 }
 
