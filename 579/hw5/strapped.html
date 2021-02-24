@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--content... shrink-to-fit=no" -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Getting stylish -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph|fire|fire-animation|neon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>STRAP SI 579 :: Homework 5</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="Title" class="font-effect-fire-animation" style="background-color:#000000;">
+            week5</h1>
+        <!--
+        <nav>
+            <ul><a href="https://www.youtube.com/watch?v=AF7h0XyiPbY">Mom Jeans :: AudioTree</a></ul>
+            <ul><a href="https://www.youtube.com/watch?v=bDKpkuOY8h0">The Front Bottoms :: AudioTree</a></ul>
+            <ul><a href="https://www.youtube.com/watch?v=ExWNledkLj0">Sayonara no Yukue by Alisa Takigawa :: Owari Mono Gatari</a></ul>
+            <ul><a href="https://www.youtube.com/watch?v=EdmL835q9To">Bloom by Thom Yorke :: Marisa Gesualdi & Electric Lady Studios</a></ul>
+            <ul><a href="https://www.youtube.com/watch?v=pok8H_KF1FA">Say So by Doja Cat :: Kemosabe Records</a></ul>
+        </nav>
+        -->
+    </header>
+    <hr/>
+
+    <section>
+        <h2>What is this?</h2>
+        <p>Assorted Garbage & Audio Shenanigans. I regret not learning more about audio-tech, so making some time for it now :)</p>
+        
+        <p>Note to Self :: To fix the "AudioContext was not allowed to start" bug resulting from importing Pizzicato and Tone,
+            check out <a href="https://github.com/Tonejs/Tone.js/issues/341">this discussion</a></p>
+    </section>
+    <hr/>
+
+    <section>
+        <p>Tone.JS Membrane-Synth 1/8th Note Hits:</p>
+        <button onclick="test1()">C1</button>
+        <button onclick="test2()">C2</button>
+        <button onclick="test3()">C3</button>
+        <button onclick="test4()">C4</button>
+        <button onclick="test5()">C5</button>
+        <button onclick="test6()">C6</button>
+        <button onclick="RadioheadTest()">RadioheadTest</button>
+    </section>
+    <hr/>
+
+    <section>
+
+
+
+        <div class="container">
+            <div class="row">
+            <!-- Oh okay hey this squishes when x axis contracts, uh-oh, fix later -->
+            <img id='Surreal-Pizza' src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza"/>
+            <section id='Osc-Panel' class="col">
+                <h2>Assorted Oscillators</h2>
+                <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating how to mess with audio in vanilla JS:</p>
+                <button onclick="beep('square')">Square Osc</button>
+                <button onclick="beep('sawtooth')">Sawtooth Osc</button>
+                <button onclick="beep('triangle')">Triangle Osc</button>
+                <button onclick="beep('sine')">Sine Osc</button>
+
+                <h2>Generate a Pitch:</h2>
+                <input type="radio" id="genPitchSq" name="customPitchOsc" value="square">
+                <label for="square">Square</label>
+                <input type="radio" id="genPitchSaw" name="customPitchOsc" value="sawtooth">
+                <label for="sawtooth">Sawtooth</label>
+                <input type="radio" id="genPitchTri" name="customPitchOsc" value="triangle">
+                <label for="triangle">Triangle</label>
+                <input type="radio" id="genPitchSin" name="customPitchOsc" value="sine">
+                <label for="sine">Sine</label></br>
+
+                <label for="pitchGen">How Many Hz? (40-4000):</label>
+                <input type="number" id="PitchInput" min="40" max="4000" value="350">
+                <button id="CustomPitchButton">Beep</button>
+                <button id="SavePitchButton">Keep</button>
+                <button id="PurgePitchButton" onclick="PurgePitches()">Purge</button>
+            </section>
+            
+            <section id='Key-Panel' class="col">
+                <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
+
+                <section id='OctaveToggles'>
+                    <h2>Toggles</h2>
+                    <input type="checkbox" id="tog_oct_cust">
+                    <label>Hide Customs</label><br>
+                    <input type="checkbox" id="tog_oct3">
+                    <label>Hide Octave 3</label><br>
+                    <input type="checkbox" id="tog_oct4">
+                    <label>Hide Octave 4</label><br>
+                    <input type="checkbox" id="tog_oct5">
+                    <label>Hide Octave 5</label><br>
+                    <input type="checkbox" id="oct_relabel">
+                    <label>Compact Keymode</label><br>
+                </section>
+                <section class="octave" id=keeped_beeps>
+                    <h2>Customs</h2>
+                    <p>Key: Square (■), Sawtooth (▼), Trangle (▲), Sine(~)</p>
+                </section>
+                <section class="octave" id='oct3'>
+                    <h2>Octave 3 Notes</h2>
+                    <button onclick="beep('sine', 130.81)" class='key white-key'>C</button>
+                    <button onclick="beep('sine', 138.59)" class='key black-key'>C#/Db</button>
+                    <button onclick="beep('sine', 145.83)" class='key white-key'>D</button>
+                    <button onclick="beep('sine', 155.56)" class='key black-key'>D#/Eb</button>
+                    <button onclick="beep('sine', 164.81)" class='key white-key'>E</button>
+                    <button onclick="beep('sine', 174.61)" class='key white-key'>F</button>
+                    <button onclick="beep('sine', 184.99)" class='key black-key'>F#/Gb</button>
+                    <button onclick="beep('sine', 195.99)" class='key white-key'>G</button>
+                    <button onclick="beep('sine', 207.65)" class='key black-key'>G#/Ab</button>
+                    <button onclick="beep('sine', 220.00)" class='key white-key'>A</button>
+                    <button onclick="beep('sine', 233.08)" class='key black-key'>A#/Bb</button>
+                    <button onclick="beep('sine', 246.94)" class='key white-key'>B</button>
+                </section>
+                <section class="octave" id='oct4'>
+                    <h2>Octave 4 Notes</h2>
+                    <button onclick="beep('sine', 261.6)" class='key white-key'>C</button>
+                    <button onclick="beep('sine', 277.2)" class='key black-key'>C#/Db</button>
+                    <button onclick="beep('sine', 293.7)" class='key white-key'>D</button>
+                    <button onclick="beep('sine', 311.1)" class='key black-key'>D#/Eb</button>
+                    <button onclick="beep('sine', 329.6)" class='key white-key'>E</button>
+                    <button onclick="beep('sine', 349.2)" class='key white-key'>F</button>
+                    <button onclick="beep('sine', 370.0)" class='key black-key'>F#/Gb</button>
+                    <button onclick="beep('sine', 392.0)" class='key white-key'>G</button>
+                    <button onclick="beep('sine', 415.3)" class='key black-key'>G#/Ab</button>
+                    <button onclick="beep('sine', 440.0)" class='key white-key'>A</button>
+                    <button onclick="beep('sine', 466.2)" class='key black-key'>A#/Bb</button>
+                    <button onclick="beep('sine', 493.9)" class='key white-key'>B</button>
+                </section>
+                <section class="octave" id='oct5'>
+                    <h2>Octave 5 Notes</h2>
+                    <button onclick="beep('sine', 523.25)" class='key white-key'>C</button>
+                    <button onclick="beep('sine', 554.36)" class='key black-key'>C#/Db</button>
+                    <button onclick="beep('sine', 587.62)" class='key white-key'>D</button>
+                    <button onclick="beep('sine', 622.25)" class='key black-key'>D#/Eb</button>
+                    <button onclick="beep('sine', 659.25)" class='key white-key'>E</button>
+                    <button onclick="beep('sine', 698.45)" class='key white-key'>F</button>
+                    <button onclick="beep('sine', 739.98)" class='key black-key'>F#/Gb</button>
+                    <button onclick="beep('sine', 783.99)" class='key white-key'>G</button>
+                    <button onclick="beep('sine', 830.60)" class='key black-key'>G#/Ab</button>
+                    <button onclick="beep('sine', 880.00)" class='key white-key'>A</button>
+                    <button onclick="beep('sine', 932.32)" class='key black-key'>A#/Bb</button>
+                    <button onclick="beep('sine', 987.76)" class='key white-key'>B</button>
+                </section>
+            </section>
+        </div>
+        </div>
+
+    </section>
+    <hr/>
+
+    <section>
+        <p>Working With MIDI:</p>
+        <ul>
+            <li><a href="https://medium.com/swinginc/playing-with-midi-in-javascript-b6999f2913c3">Medium :: Playing with MIDI [input] in JS</a></li>
+            <li><a href="https://www.smashingmagazine.com/2018/03/web-midi-api/">Getting Started with the Web MIDI API</a></li>
+        </ul>
+        <p>JS Audio Library Indexes:</p>
+        <ul>
+            <li><a href="https://medium.com/swlh/the-best-javascript-audio-libraries-for-manipulating-sound-6fe319e32d49">
+                Medium :: The Best Javascript Audio Libraries for Manipulating Sound</a></li>
+            <li><a href="https://bashooka.com/coding/web-audio-javascript-libraries/">
+            Bashooka :: 20 Useful Web Audio Javascript Libraries</a></li>
+            <li><a href="https://www.javascripting.com/audio/">Javascripting :: Audio Index</a></li>
+        </ul>
+
+        <p>Top 3 Picks:</p>
+        <ul>
+            <li><a href="https://tonejs.github.io">Tone.JS Documentation</a>
+                <ul>
+                    <li><a href="https://medium.com/dev-red/tutorial-lets-make-music-with-javascript-and-tone-js-f6ac39d95b8c">
+                        Medium :: Tutorial - Let's Make Music W/ Javascript & Tone.JS</a></li>
+                    <li><a href="https://tonejs.github.io/docs/14.7.77/MonoSynth.html">Other Documentation + Voicings</a></li>
+                    <li><a href="https://cdnjs.com/libraries/tone">CDN::Tone.js</a></li>
+                </ul>
+            </li>
+            <li><a href="https://github.com/Theodeus/tuna">Tuna.js Documentation</a></li>
+            <li><s><a href="https://alemangui.github.io/pizzicato/">Pizzicato.js Documentation</a></s> (Try Again Later)
+                <ul>
+                    <li><a href="https://cdnjs.com/libraries/pizzicato">CDN::Pizzicato.js</a></li>
+                    <li><a href="https://codepen.io/gregh/post/start-using-the-web-audio-with-pizzicato-js">
+                        Web Audio with Pizzicato.js</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--    https://github.com/kylestetz/lissajous     https://github.com/zya/beet.js   
+                https://github.com/rserota/wad             https://github.com/bbc/peaks.js  
+                https://okazari.github.io/Rythm.js/         -->
+    </section>
+
+    <footer>
+        <hr/>
+        McCoy Doherty -- Winter 2021
+    </footer>
+
+    <!-- Tone.JS via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js" integrity="sha512-nUjml8mN4CNYqBAy0ndDrd8pJV/eTtBNDsnvNtPqozx9/BccUeWSoKW14qWkQUnhuh8E3m+yra3qdzM68lqPEQ==" crossorigin="anonymous"></script>
+    <!-- Stuff for bootstrap https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!-- Personal Scripts-->
+    <script src="audio.js"></script>
+    <script src="audio2.js"></script>
+
+</body>
+
+</html>

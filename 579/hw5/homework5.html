@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--content... shrink-to-fit=no" -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Getting stylish -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph|fire|fire-animation|neon">
-    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
     <title>SI 579 :: Homework 5</title>
 </head>
 
@@ -30,6 +32,15 @@
     <hr/>
 
     <section>
+        <h2>What is this?</h2>
+        <p>Assorted Garbage & Audio Shenanigans. I regret not learning more about audio-tech, so making some time for it now :)</p>
+        
+        <p>Note to Self :: To fix the "AudioContext was not allowed to start" bug resulting from importing Pizzicato and Tone,
+            check out <a href="https://github.com/Tonejs/Tone.js/issues/341">this discussion</a></p>
+    </section>
+    <hr/>
+
+    <section>
         <p>Tone.JS Membrane-Synth 1/8th Note Hits:</p>
         <button onclick="test1()">C1</button>
         <button onclick="test2()">C2</button>
@@ -38,50 +49,6 @@
         <button onclick="test5()">C5</button>
         <button onclick="test6()">C6</button>
         <button onclick="RadioheadTest()">RadioheadTest</button>
-    </section>
-
-    <section>
-        <h2>What is this?</h2>
-        <p>Assorted Garbage & Audio Shenanigans. I regret not learning more about audio-tech, so making some time for it now :)</p>
-        
-        <p>Note to Self :: To fix the "AudioContext was not allowed to start" bug resulting from importing Pizzicato and Tone,
-            check out <a href="https://github.com/Tonejs/Tone.js/issues/341">this discussion</a></p>
-        <p>Working With MIDI:</p>
-        <ul>
-            <li><a href="https://medium.com/swinginc/playing-with-midi-in-javascript-b6999f2913c3">Medium :: Playing with MIDI [input] in JS</a></li>
-            <li><a href="https://www.smashingmagazine.com/2018/03/web-midi-api/">Getting Started with the Web MIDI API</a></li>
-        </ul>
-        <p>JS Audio Library Indexes:</p>
-        <ul>
-            <li><a href="https://medium.com/swlh/the-best-javascript-audio-libraries-for-manipulating-sound-6fe319e32d49">
-                Medium :: The Best Javascript Audio Libraries for Manipulating Sound</a></li>
-            <li><a href="https://bashooka.com/coding/web-audio-javascript-libraries/">
-            Bashooka :: 20 Useful Web Audio Javascript Libraries</a></li>
-            <li><a href="https://www.javascripting.com/audio/">Javascripting :: Audio Index</a></li>
-        </ul>
-
-        <p>Top 3 Picks:</p>
-        <ul>
-            <li><a href="https://tonejs.github.io">Tone.JS Documentation</a>
-                <ul>
-                    <li><a href="https://medium.com/dev-red/tutorial-lets-make-music-with-javascript-and-tone-js-f6ac39d95b8c">
-                        Medium :: Tutorial - Let's Make Music W/ Javascript & Tone.JS</a></li>
-                    <li><a href="https://tonejs.github.io/docs/14.7.77/MonoSynth.html">Other Documentation + Voicings</a></li>
-                    <li><a href="https://cdnjs.com/libraries/tone">CDN::Tone.js</a></li>
-                </ul>
-            </li>
-            <li><a href="https://github.com/Theodeus/tuna">Tuna.js Documentation</a></li>
-            <li><s><a href="https://alemangui.github.io/pizzicato/">Pizzicato.js Documentation</a></s> (Try Again Later)
-                <ul>
-                    <li><a href="https://cdnjs.com/libraries/pizzicato">CDN::Pizzicato.js</a></li>
-                    <li><a href="https://codepen.io/gregh/post/start-using-the-web-audio-with-pizzicato-js">
-                        Web Audio with Pizzicato.js</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!--    https://github.com/kylestetz/lissajous     https://github.com/zya/beet.js   
-                https://github.com/rserota/wad             https://github.com/bbc/peaks.js  
-                https://okazari.github.io/Rythm.js/         -->
     </section>
     <hr/>
 
@@ -183,6 +150,45 @@
     </section>
     <hr/>
 
+    <section>
+        <p>Working With MIDI:</p>
+        <ul>
+            <li><a href="https://medium.com/swinginc/playing-with-midi-in-javascript-b6999f2913c3">Medium :: Playing with MIDI [input] in JS</a></li>
+            <li><a href="https://www.smashingmagazine.com/2018/03/web-midi-api/">Getting Started with the Web MIDI API</a></li>
+        </ul>
+        <p>JS Audio Library Indexes:</p>
+        <ul>
+            <li><a href="https://medium.com/swlh/the-best-javascript-audio-libraries-for-manipulating-sound-6fe319e32d49">
+                Medium :: The Best Javascript Audio Libraries for Manipulating Sound</a></li>
+            <li><a href="https://bashooka.com/coding/web-audio-javascript-libraries/">
+            Bashooka :: 20 Useful Web Audio Javascript Libraries</a></li>
+            <li><a href="https://www.javascripting.com/audio/">Javascripting :: Audio Index</a></li>
+        </ul>
+
+        <p>Top 3 Picks:</p>
+        <ul>
+            <li><a href="https://tonejs.github.io">Tone.JS Documentation</a>
+                <ul>
+                    <li><a href="https://medium.com/dev-red/tutorial-lets-make-music-with-javascript-and-tone-js-f6ac39d95b8c">
+                        Medium :: Tutorial - Let's Make Music W/ Javascript & Tone.JS</a></li>
+                    <li><a href="https://tonejs.github.io/docs/14.7.77/MonoSynth.html">Other Documentation + Voicings</a></li>
+                    <li><a href="https://cdnjs.com/libraries/tone">CDN::Tone.js</a></li>
+                </ul>
+            </li>
+            <li><a href="https://github.com/Theodeus/tuna">Tuna.js Documentation</a></li>
+            <li><s><a href="https://alemangui.github.io/pizzicato/">Pizzicato.js Documentation</a></s> (Try Again Later)
+                <ul>
+                    <li><a href="https://cdnjs.com/libraries/pizzicato">CDN::Pizzicato.js</a></li>
+                    <li><a href="https://codepen.io/gregh/post/start-using-the-web-audio-with-pizzicato-js">
+                        Web Audio with Pizzicato.js</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!--    https://github.com/kylestetz/lissajous     https://github.com/zya/beet.js   
+                https://github.com/rserota/wad             https://github.com/bbc/peaks.js  
+                https://okazari.github.io/Rythm.js/         -->
+    </section>
+
     <footer>
         <hr/>
         McCoy Doherty -- Winter 2021
@@ -190,9 +196,8 @@
 
     <!-- Tone.JS via CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js" integrity="sha512-nUjml8mN4CNYqBAy0ndDrd8pJV/eTtBNDsnvNtPqozx9/BccUeWSoKW14qWkQUnhuh8E3m+yra3qdzM68lqPEQ==" crossorigin="anonymous"></script>
-    <!-- Pizzicato.JS via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js" integrity="sha512-VyI1QFJ5vvwgy/FPf+XWs64XHBFUEMRZNzrhQiXdOFEyDuNO6H8hp/Of4jfo7NG4UEJOnxjP5cwj1P9nqLkTYg==" crossorigin="anonymous"></script>
-
+    <!-- Stuff for bootstrap https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <!-- Personal Scripts-->
     <script src="audio.js"></script>
     <script src="audio2.js"></script>
