@@ -52,17 +52,13 @@
     </section>
     <hr/>
 
-    <section>
-
-
-
-        <div class="container">
-            <div class="row">
+    <section class="container">
+        <div class="row">
             <!-- Oh okay hey this squishes when x axis contracts, uh-oh, fix later -->
-            <img id='Surreal-Pizza' src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza"/>
-            <section id='Osc-Panel' class="col">
+            <img class="col-4" id='Surreal-Pizza' src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza"/>
+            <section id='Osc-Panel' class="col-5">
                 <h2>Assorted Oscillators</h2>
-                <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating how to mess with audio in vanilla JS:</p>
+                <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating vanilla JS audio:</p>
                 <button onclick="beep('square')">Square Osc</button>
                 <button onclick="beep('sawtooth')">Sawtooth Osc</button>
                 <button onclick="beep('triangle')">Triangle Osc</button>
@@ -84,23 +80,23 @@
                 <button id="SavePitchButton">Keep</button>
                 <button id="PurgePitchButton" onclick="PurgePitches()">Purge</button>
             </section>
-            
-            <section id='Key-Panel' class="col">
-                <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
 
-                <section id='OctaveToggles'>
-                    <h2>Toggles</h2>
-                    <input type="checkbox" id="tog_oct_cust">
-                    <label>Hide Customs</label><br>
-                    <input type="checkbox" id="tog_oct3">
-                    <label>Hide Octave 3</label><br>
-                    <input type="checkbox" id="tog_oct4">
-                    <label>Hide Octave 4</label><br>
-                    <input type="checkbox" id="tog_oct5">
-                    <label>Hide Octave 5</label><br>
-                    <input type="checkbox" id="oct_relabel">
-                    <label>Compact Keymode</label><br>
-                </section>
+            <section class="row" id='OctaveToggles'>
+                <h2>Toggles</h2>
+                <input type="checkbox" id="tog_oct_cust">
+                <label>Hide Customs</label><br>
+                <input type="checkbox" id="tog_oct3">
+                <label>Hide Octave 3</label><br>
+                <input type="checkbox" id="tog_oct4">
+                <label>Hide Octave 4</label><br>
+                <input type="checkbox" id="tog_oct5">
+                <label>Hide Octave 5</label><br>
+                <input type="checkbox" id="oct_relabel">
+                <label>Compact Keymode</label><br>
+            </section>
+            
+            <section class="row" id='Key-Panel'>
+                <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
                 <section class="octave" id=keeped_beeps>
                     <h2>Customs</h2>
                     <p>Key: Square (■), Sawtooth (▼), Trangle (▲), Sine(~)</p>
@@ -152,8 +148,6 @@
                 </section>
             </section>
         </div>
-        </div>
-
     </section>
     <hr/>
 
