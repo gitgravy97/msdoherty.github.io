@@ -23,6 +23,10 @@ p {
     font-family: 'Noto Serif JP';
 }
 
+section, footer {
+    margin: 6px;
+}
+
 table, th, td {border: 1px solid;}
 
 td{ padding: 3px;}

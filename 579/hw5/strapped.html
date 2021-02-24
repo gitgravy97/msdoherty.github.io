@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Getting stylish -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+JP">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=anaglyph|fire|fire-animation|neon">
     <!-- Bootstrap -->
@@ -35,53 +35,59 @@
         <h2>What is this?</h2>
         <p>Assorted Garbage & Audio Shenanigans. I regret not learning more about audio-tech, so making some time for it now :)</p>
         
-        <p>Note to Self :: To fix the "AudioContext was not allowed to start" bug resulting from importing Pizzicato and Tone,
-            check out <a href="https://github.com/Tonejs/Tone.js/issues/341">this discussion</a></p>
-    </section>
-    <hr/>
+        <p><i>Note to Self :: To fix the "AudioContext was not allowed to start" bug resulting from importing Pizzicato and Tone,
+            check out <a href="https://github.com/Tonejs/Tone.js/issues/341">this discussion</a></i></p>
 
-    <section>
-        <p>Tone.JS Membrane-Synth 1/8th Note Hits:</p>
-        <button onclick="test1()">C1</button>
-        <button onclick="test2()">C2</button>
-        <button onclick="test3()">C3</button>
-        <button onclick="test4()">C4</button>
-        <button onclick="test5()">C5</button>
-        <button onclick="test6()">C6</button>
-        <button onclick="RadioheadTest()">RadioheadTest</button>
+        <p>To reach the Non-Bootstrap Version of this page, click: <a href="./homework5.html">[here]</a></p>
     </section>
     <hr/>
 
     <section class="container">
         <div class="row">
-            <!-- Oh okay hey this squishes when x axis contracts, uh-oh, fix later -->
             <img class="col-4" id='Surreal-Pizza' src="Soundcard_Za.png" alt="Sound-Card-and-Yoga-Mat Pizza"/>
-            <section id='Osc-Panel' class="col-5">
-                <h2>Assorted Oscillators</h2>
-                <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating vanilla JS audio:</p>
-                <button onclick="beep('square')">Square Osc</button>
-                <button onclick="beep('sawtooth')">Sawtooth Osc</button>
-                <button onclick="beep('triangle')">Triangle Osc</button>
-                <button onclick="beep('sine')">Sine Osc</button>
-
-                <h2>Generate a Pitch:</h2>
-                <input type="radio" id="genPitchSq" name="customPitchOsc" value="square">
-                <label for="square">Square</label>
-                <input type="radio" id="genPitchSaw" name="customPitchOsc" value="sawtooth">
-                <label for="sawtooth">Sawtooth</label>
-                <input type="radio" id="genPitchTri" name="customPitchOsc" value="triangle">
-                <label for="triangle">Triangle</label>
-                <input type="radio" id="genPitchSin" name="customPitchOsc" value="sine">
-                <label for="sine">Sine</label></br>
-
-                <label for="pitchGen">How Many Hz? (40-4000):</label>
-                <input type="number" id="PitchInput" min="40" max="4000" value="350">
-                <button id="CustomPitchButton">Beep</button>
-                <button id="SavePitchButton">Keep</button>
-                <button id="PurgePitchButton" onclick="PurgePitches()">Purge</button>
+            <section class="col-5">
+                <section class="col">
+                    <h2>Tone.JS Membrane-Synth 1/8th Note Hits:</h2>
+                    <button onclick="test1()">C1</button>
+                    <button onclick="test2()">C2</button>
+                    <button onclick="test3()">C3</button>
+                    <button onclick="test4()">C4</button>
+                    <button onclick="test5()">C5</button>
+                    <button onclick="test6()">C6</button>
+                    <button onclick="RadioheadTest()">RadioheadTest</button>
+                </section>
+                <section class="col">
+                    <h2>Assorted Oscillators</h2>
+                    <p>Credit to <a href="https://marcgg.com/blog/2016/11/01/javascript-audio/">"MarcGG"</a> for demonstrating vanilla JS audio:</p>
+                    <button onclick="beep('square')">Square Osc</button>
+                    <button onclick="beep('sawtooth')">Sawtooth Osc</button>
+                    <button onclick="beep('triangle')">Triangle Osc</button>
+                    <button onclick="beep('sine')">Sine Osc</button>
+                </section>
+                <section class="col-8">
+                    <h2>Generate a Pitch:</h2>
+                    <input type="radio" id="genPitchSq" name="customPitchOsc" value="square">
+                    <label for="square">Square</label>
+                    <input type="radio" id="genPitchSaw" name="customPitchOsc" value="sawtooth">
+                    <label for="sawtooth">Sawtooth</label>
+                    <input type="radio" id="genPitchTri" name="customPitchOsc" value="triangle">
+                    <label for="triangle">Triangle</label>
+                    <input type="radio" id="genPitchSin" name="customPitchOsc" value="sine">
+                    <label for="sine">Sine</label></br>
+    
+                    <label for="pitchGen">How Many Hz? (40-4000):</label>
+                    <input type="number" id="PitchInput" min="40" max="4000" value="350">
+                    <button id="CustomPitchButton">Beep</button>
+                    <button id="SavePitchButton">Keep</button>
+                    <button id="PurgePitchButton" onclick="PurgePitches()">Purge</button>
+                </section>
             </section>
+        </div>
+    </section>
 
-            <section class="row" id='OctaveToggles'>
+    <section class="container">
+        <section class="row">
+            <section class="col-2" id='OctaveToggles'>
                 <h2>Toggles</h2>
                 <input type="checkbox" id="tog_oct_cust">
                 <label>Hide Customs</label><br>
@@ -94,8 +100,7 @@
                 <input type="checkbox" id="oct_relabel">
                 <label>Compact Keymode</label><br>
             </section>
-            
-            <section class="row" id='Key-Panel'>
+            <section class="col" id='Key-Panel'>
                 <!-- https://en.wikipedia.org/wiki/Scientific_pitch_notation -->
                 <section class="octave" id=keeped_beeps>
                     <h2>Customs</h2>
@@ -147,11 +152,15 @@
                     <button onclick="beep('sine', 987.76)" class='key white-key'>B</button>
                 </section>
             </section>
-        </div>
+        </section>
     </section>
+
+    
+
     <hr/>
 
     <section>
+        <h2>JS Audio Resource Dump for Memory/Reference</h2>
         <p>Working With MIDI:</p>
         <ul>
             <li><a href="https://medium.com/swinginc/playing-with-midi-in-javascript-b6999f2913c3">Medium :: Playing with MIDI [input] in JS</a></li>
@@ -166,7 +175,7 @@
             <li><a href="https://www.javascripting.com/audio/">Javascripting :: Audio Index</a></li>
         </ul>
 
-        <p>Top 3 Picks:</p>
+        <p>Top 4 Audio Libraries of Interest:</p>
         <ul>
             <li><a href="https://tonejs.github.io">Tone.JS Documentation</a>
                 <ul>
@@ -184,15 +193,16 @@
                         Web Audio with Pizzicato.js</a></li>
                 </ul>
             </li>
+            <li><a href="https://github.com/rserota/wad">Wad.js</a></li>
         </ul>
         <!--    https://github.com/kylestetz/lissajous     https://github.com/zya/beet.js   
                 https://github.com/rserota/wad             https://github.com/bbc/peaks.js  
                 https://okazari.github.io/Rythm.js/         -->
     </section>
 
+    <hr/>
     <footer>
-        <hr/>
-        McCoy Doherty -- Winter 2021
+        <p>McCoy Doherty -- Winter 2021</p>
     </footer>
 
     <!-- Tone.JS via CDN -->
