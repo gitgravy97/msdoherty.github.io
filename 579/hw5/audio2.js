@@ -16,11 +16,8 @@ please_work.addEventListener('click', ()=>{
         options: { volume: 0.8 }
     }, function() {
         voice.play();
-    });
-
-    const please_stop = document.getElementById('microphone-cut');
-    please_stop.addEventListener('click'), ()=>{
+        const please_stop = document.getElementById('microphone-cut');
+        please_stop.addEventListener('click'), ()=>{
         console.log("kill trigger");
         voice.stop();
-    }
-})
+}})})
