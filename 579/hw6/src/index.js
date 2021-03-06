@@ -104,7 +104,7 @@ const beep_creep = document.getElementById('SavePitchButton');
 beep_creep.addEventListener('click', ()=>BeepKeep())
 
 function PurgePitches(){
-    purgeables = document.getElementById('keeped_beeps').getElementsByClassName('key')
+    window.purgeables = document.getElementById('keeped_beeps').getElementsByClassName('key')
     console.log(purgeables)
     while(purgeables[0]){
         purgeables[0].remove();
